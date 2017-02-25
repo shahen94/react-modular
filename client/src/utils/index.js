@@ -1,0 +1,1 @@
+export asyncRoute from './asyncRoute';
