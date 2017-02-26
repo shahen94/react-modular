@@ -1,4 +1,5 @@
 import React, { PropTypes, Component } from 'react';
+import { List } from './components';
 import connect from './connect';
 
 class Dashboard extends Component {
@@ -13,9 +14,16 @@ class Dashboard extends Component {
 	constructor(props) {
 		super(props);
 	}
+	componentDidMount() {
+		this.props.getData();
+	}
 	render() {
+		const { data, loading } = this.props;
 		return (
-			<div>I'm a dashboard</div>
+			<div>
+				{loading && <div>Loading</div>}
+				<List data={data} />
+			</div>
 		);
 	}
 }

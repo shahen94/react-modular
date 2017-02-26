@@ -1,4 +1,5 @@
 export {
 	dashboardRoutes,
-	dashboardReducers
+	dashboardReducers,
+	dashboardSagas
 } from './dashboard';
